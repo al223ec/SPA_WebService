@@ -1,0 +1,10 @@
+﻿@model IEnumerable<WebService.Models.Reservation>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+@Html.Partial("Summary", Model)
+@Html.Partial("Editor", new WebService.Models.Reservation())
+
+

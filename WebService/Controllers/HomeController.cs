@@ -35,7 +35,7 @@ namespace WebService.Controllers
             {
                 return RedirectToAction("Index");
             }
-            return View("Index")
+            return View("Index");
         }
     }
 }
