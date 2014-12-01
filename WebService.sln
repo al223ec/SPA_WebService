@@ -3,7 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebService", "WebService\WebService.csproj", "{BB333433-87C9-4A20-9AF0-450796026AF8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API", "SPA\API.csproj", "{B561B065-FEC9-49A2-A267-18B4670CC349}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{887BBE5C-A72B-411D-A7EA-F6DE3601048D}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +18,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{BB333433-87C9-4A20-9AF0-450796026AF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BB333433-87C9-4A20-9AF0-450796026AF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BB333433-87C9-4A20-9AF0-450796026AF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BB333433-87C9-4A20-9AF0-450796026AF8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B561B065-FEC9-49A2-A267-18B4670CC349}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B561B065-FEC9-49A2-A267-18B4670CC349}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B561B065-FEC9-49A2-A267-18B4670CC349}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B561B065-FEC9-49A2-A267-18B4670CC349}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
