@@ -25,7 +25,7 @@ namespace WebService.Models.Repository
                 ResevationId = 2, ClientName = "Anton", Location = "Room"
             },
         };
-        private IEnumerable<Reservation> GetAll()
+        public IEnumerable<Reservation> GetAll()
         {
             return data.AsEnumerable();
         }
