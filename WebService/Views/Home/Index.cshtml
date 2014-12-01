@@ -1,10 +1,69 @@
 ﻿@model IEnumerable<WebService.Models.Reservation>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Reservations a SPA";
 }
 
-@Html.Partial("Summary", Model)
-@Html.Partial("Editor", new WebService.Models.Reservation())
 
 
+@section Scripts{
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <script src="~/Scripts/jquery-2.1.1.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/knockout-3.2.0.js"></script>
+    <script>
+        var model = {
+            reservations : ko.observableArray()
+        }
+        function sendAjaxRequest(httpMethod, callback, url) {
+            $.ajax("/api/web" + (url ? "/" + url : ""), {
+                type: httpMethod, success: callback
+            });
+        }
+        function getAllItems() {
+            sendAjaxRequest("GET", function (data) {
+                model.reservations.removeAll();
+                for (var i = 0; i < data.length; i++) {
+                    model.reservations.push(data[i]);
+                }
+            });
+        }
+
+        function removeItem(item) {
+            sendAjaxRequest("DELETE", function () {
+                getAllItems();
+            }, item.ReservationId); 
+        }
+        $(document).ready(function () {
+            getAllItems();
+            ko.applyBindings(model);
+        })
+    </script>
+}
+@section Body{
+    <div id="summary" class="section panel">
+        <table class="table">
+            <thead>
+                <tr><th>ID</th><th>Name</th><th>Location</th><th></th></tr>
+            </thead>
+            <tbody data-bind="foreach: model.reservations">
+                <tr>
+                    <td data-bind="text: ResevationId"></td>
+                    <td data-bind="text: ClientName"></td>
+                    <td data-bind="text: Location"></td>
+
+                    <td>
+                        <button class="btn btn-xs" data-bind="click: removeItem"> Remove</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table> 
+
+    </div>
+
+    @Html.Partial("Editor", new WebService.Models.Reservation())
+
+
+}
