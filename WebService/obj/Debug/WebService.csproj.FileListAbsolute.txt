@@ -16,3 +16,11 @@ C:\Users\Anton\Documents\GitHub\SPA_WebService\WebService\bin\System.Web.Helpers
 C:\Users\Anton\Documents\GitHub\SPA_WebService\WebService\bin\System.Web.Mvc.xml
 C:\Users\Anton\Documents\GitHub\SPA_WebService\WebService\obj\Debug\WebService.dll
 C:\Users\Anton\Documents\GitHub\SPA_WebService\WebService\obj\Debug\WebService.pdb
+C:\Users\Anton\Documents\GitHub\SPA_WebService\WebService\bin\Newtonsoft.Json.dll
+C:\Users\Anton\Documents\GitHub\SPA_WebService\WebService\bin\System.Net.Http.Formatting.dll
+C:\Users\Anton\Documents\GitHub\SPA_WebService\WebService\bin\System.Web.Http.dll
+C:\Users\Anton\Documents\GitHub\SPA_WebService\WebService\bin\System.Web.Http.WebHost.dll
+C:\Users\Anton\Documents\GitHub\SPA_WebService\WebService\bin\Newtonsoft.Json.xml
+C:\Users\Anton\Documents\GitHub\SPA_WebService\WebService\bin\System.Net.Http.Formatting.xml
+C:\Users\Anton\Documents\GitHub\SPA_WebService\WebService\bin\System.Web.Http.xml
+C:\Users\Anton\Documents\GitHub\SPA_WebService\WebService\bin\System.Web.Http.WebHost.xml
